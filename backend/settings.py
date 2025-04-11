@@ -7,14 +7,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 sys.path.append(str(BASE_DIR))
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
+# https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECRET_KEY, DEBUG e ALLOWED_HOSTS usando variáveis de ambiente
-SECRET_KEY = os.environ.get("SECRET_KEY", "sua-secret-local")
+SECRET_KEY = os.environ.get("SECRET_KEY", "insecure-dev-key-do-not-use-in-prod")
 
 DEBUG = os.environ.get("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+if os.environ.get('RENDER_EXTERNAL_HOSTNAME'):
+    ALLOWED_HOSTS.append(os.environ['RENDER_EXTERNAL_HOSTNAME'])
 
 # Application definition
 
@@ -32,7 +34,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',  # <-- deve estar no topo
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -104,7 +106,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS
-MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Django REST Framework + JWT
@@ -119,6 +120,3 @@ SIMPLE_JWT = {
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
-
-if os.environ.get('RENDER'):
-    ALLOWED_HOSTS.append(os.environ['RENDER_EXTERNAL_HOSTNAME'])

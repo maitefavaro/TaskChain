@@ -1,0 +1,306 @@
+.projects-container {
+    padding: 2rem;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fefefe;
+    min-height: 100vh;
+  }
+  
+  .kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .kanban-header h1 {
+    color: #f38375;
+    font-size: 2rem;
+  }
+  
+  .new-task-btn {
+    background-color: #f38375;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .new-task-btn:hover {
+    background-color: #e36d63;
+  }
+  
+  .kanban-board {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+  }
+  
+  .kanban-column {
+    background-color: #ffe3e0;
+    flex: 1;
+    min-width: 280px;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .kanban-column h2 {
+    color: #f38375;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .task-card {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-title {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-icons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+  }
+  
+  .icon {
+    color: #f38375;
+  }
+  
+  /* Modal refinado */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 24px 28px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-content h2 {
+    color: #f38375;
+    font-size: 20px;
+    margin: 0 0 8px;
+  }
+  
+  .modal-content input,
+  .modal-content select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .modal-content label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .modal-buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .modal-buttons button:hover {
+    opacity: 0.9;
+  }
+  
+  .modal-buttons .close-btn {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .modal-buttons button:not(.close-btn) {
+    background-color: #f38375;
+    color: white;
+  }
+  
+  .close-btn {
+    background-color: transparent;
+    color: #f38375;
+    border: 2px solid #f38375;
+    padding: 0.6rem 1.4rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    background-color: #f38375;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  
+  .checkbox-wrapper label {
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .custom-checkbox {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #F38375;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .custom-checkbox:checked {
+    background-color: #F38375;
+    border-color: #F38375;
+  }
+  
+  .custom-checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .custom-checkbox:active {
+    transform: scale(0.95);
+  }
+
+  .help-toggle-button {
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border: 2px solid #F38375;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #F38375;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .help-toggle-button.active {
+    background-color: #F38375;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .help-toggle-button:hover {
+    background-color: #fce0dd;
+  }
+
+  .task-title {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .done-icon {
+    color: green;
+ 
+    margin-left: 10px;
+  }
+  
+  
+  .help-toast {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F38375;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    font-weight: bold;
+    z-index: 1000;
+    animation: fadeInUp 0.5s ease, fadeOut 0.5s ease 2.5s;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 20%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  

@@ -1,0 +1,34 @@
+/* Header.css */
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #FFE3E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #F38375;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #d55b47;
+  }
+  

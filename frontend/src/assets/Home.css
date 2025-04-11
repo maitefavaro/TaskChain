@@ -1,0 +1,134 @@
+.home-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #FFE3E0, #FCE4EC);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-box {
+  background-color: white;
+  padding: 50px 40px;
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.4s ease;
+  animation: slideUp 0.8s ease;
+}
+
+.home-box:hover {
+  transform: translateY(-5px);
+}
+
+.home-title {
+  font-size: 34px;
+  color: #F38375;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.home-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-button, .home-button-outline {
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  min-width: 110px;
+  text-align: center;
+}
+
+.home-button {
+  background-color: #F38375;
+  color: white;
+  border: none;
+}
+
+.home-button:hover {
+  background-color: #e46c61;
+}
+
+.home-button-outline {
+  background-color: transparent;
+  color: #F38375;
+  border: 2px solid #F38375;
+}
+
+.home-button-outline:hover {
+  background-color: #F38375;
+  color: white;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .home-box {
+    padding: 30px 20px;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+  }
+}
+
+.home-container {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFE3E0;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.home-image-box {
+  max-width: 350px;
+}
+
+.home-illustration {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}

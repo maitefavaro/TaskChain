@@ -1,0 +1,140 @@
+/* Register.css */
+
+/* Container principal com fundo gradiente */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Faz o container ocupar toda a altura da tela */
+    background: linear-gradient(135deg, #F38375, #FFE3E0); /* Gradiente suave */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Container do formulário de registro */
+  .register-form-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Sombra mais intensa */
+    width: 100%;
+    max-width: 420px; /* Largura do formulário */
+    position: relative;
+    z-index: 1; /* Garantir que fique acima de qualquer elemento */
+    text-align: center; /* Alinha o texto do formulário no centro */
+  }
+  
+  /* Efeito de elevação e animação ao passar o mouse */
+  .register-form-container:hover {
+    transform: translateY(-15px); /* Efeito de flutuação */
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2); /* Efeito de sombra mais forte */
+  }
+  
+  /* Cabeçalho com mais estilo */
+  .register-heading {
+    font-size: 32px; /* Fonte maior e mais imponente */
+    font-weight: 700;
+    color: #F38375; /* Cor de destaque */
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out; /* Animação suave ao carregar */
+  }
+  
+  /* Animação de fade-in no título */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos dos campos de entrada */
+  .input-group {
+    margin-bottom: 25px; /* Maior espaçamento entre os campos */
+    text-align: left; /* Alinha o texto do label à esquerda */
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid #F38375; /* Borda do input com a cor principal */
+    border-radius: 8px; /* Bordas arredondadas */
+    background-color: #FFE3E0; /* Cor de fundo suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Centraliza os campos de entrada */
+  }
+  
+  .input-group input:focus {
+    border-color: #F38375; /* Cor de foco dos inputs */
+    box-shadow: 0 0 10px rgba(243, 131, 117, 0.5); /* Sombra suave */
+    outline: none;
+  }
+  
+  /* Botão de submit com animação */
+  .register-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #F38375;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 1px;
+    margin-top: 20px;
+  }
+  
+  .register-button:hover {
+    background-color: #E14F52;
+    transform: scale(1.05); /* Aumento no hover */
+  }
+  
+  .register-button:active {
+    transform: scale(0.98); /* Efeito de clique */
+  }
+  
+  /* Adicionando ícones de interação para feedback visual */
+  .input-group input::placeholder {
+    color: #F38375; /* Cor do placeholder */
+    font-style: italic;
+  }
+  
+  /* Mensagem de erro ou sucesso */
+  .error-message {
+    color: #FF4D4D;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .success-message {
+    color: #4CAF50;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .logout {
+    background-color: yellow;
+    border: 1px solid red;
+  }
+  
+  
+  

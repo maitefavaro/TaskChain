@@ -1,0 +1,254 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  background-color: #f38375;
+  color: white;
+  width: 240px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.menu li:hover {
+  text-decoration: underline;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* === MAIN CONTENT === */
+.main-content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+/* === HEADER === */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.dashboard-header h1 {
+  color: #f38375;
+  font-size: 2rem;
+}
+
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+/* === GRID === */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+
+/* === CARDS === */
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Tasks by Project */
+.tasks-by-projects .mock-chart {
+  height: 160px;
+  margin: 16px 0;
+  background-color: #fce4ec;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-size: 14px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.marketing { background-color: #fbc02d; }
+.hr        { background-color: #f57c00; }
+.dev       { background-color: #4dd0e1; }
+.design    { background-color: #9575cd; }
+
+/* Employee Stats */
+.employee-stats .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.employee-stats ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.dot.inactive { background-color: #d32f2f; }
+.dot.active   { background-color: #ef6c00; }
+.dot.total    { background-color: #fbc02d; }
+
+.mock-illustration {
+  height: 140px;
+  background-color: #fff3e0;
+  margin-top: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* Side Cards */
+.side-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.small-card {
+  text-align: center;
+  background-color: #f38375;
+  color: white;
+}
+
+.small-card h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.small-card p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.small-card span {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Notifications */
+.notifications .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.notifications ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.notifications li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar li {
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 1rem;
+  color: white;
+}
+
+.logo-icon {
+  margin-right: 0.5rem;
+  color: white;
+}
+
+.logo-text {
+  color: rgb(228, 82, 82);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Isso empurra o logout pro fim */
+  height: 100vh;
+  padding: 20px;
+
+  width: 250px;
+}

@@ -1,0 +1,151 @@
+/* Register.css */
+
+.register-wrapper {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #ffe3e0;
+}
+
+.left-panel {
+  flex: 1; /* painel menor */
+  background-color: #F38375;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 0 20px 20px 0;
+}
+
+.right-panel {
+  flex: 2; /* painel maior */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 0 0 0 20px;
+  background-color: white;
+}
+
+
+.left-panel h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.left-panel p {
+  font-size: 14px;
+  max-width: 280px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sign-in-btn {
+  padding: 10px 28px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background-color: white;
+  color: #F38375;
+}
+
+.right-panel h2 {
+  color: #F38375;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  color: #F38375;
+  border: 1px solid #F38375;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.social-icons i:hover {
+  background-color: #F38375;
+  color: white;
+}
+
+.or-text {
+  font-size: 13px;
+  color: #555;
+  margin: 10px 0;
+}
+
+form {
+  width: 80%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffe3e0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+form input:focus {
+  outline: none;
+  background-color: #fff;
+  border: 2px solid #F38375;
+}
+
+form button {
+  padding: 12px;
+  background-color: #F38375;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #d55b47;
+}
+
+.login-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: white;
+  color: #F38375;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #fcd7d3;
+  color: #d55b47;
+}
+

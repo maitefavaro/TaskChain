@@ -1,0 +1,16 @@
+.logo {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #ec4b4b;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1; /* Importante para evitar espaçamento vertical extra */
+}
+
+.logo span {
+  color: #d55b47;
+}

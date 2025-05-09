@@ -1,3 +1,5 @@
+# Alteração feita na branch iteracao2 para o exercício da disciplina
+
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -34,7 +36,7 @@ class Tarefa(models.Model):
         ('ajuda', 'Preciso de ajuda'),
     ]
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
+
 
     data_criacao = models.DateTimeField(auto_now_add=True)
     data_conclusao = models.DateTimeField(null=True, blank=True)

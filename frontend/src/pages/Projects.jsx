@@ -108,7 +108,7 @@ const Projects = () => {
         </div>
         <nav className="menu">
           <ul>
-            <li onClick={() => navigate("/dashboard")}><FaTachometerAlt /> Dashboard</li>
+            <li onClick={() => navigate("/dashboard-funcionario")}><FaTachometerAlt /> Dashboard</li>
             <li className="active"><FaProjectDiagram /> Tasks</li>
           </ul>
         </nav>

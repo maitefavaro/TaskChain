@@ -1,0 +1,322 @@
+/* Container geral */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f7f3f2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Sidebar padrão coral */
+.sidebar {
+  background-color: #f38375;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  box-shadow: 3px 0 10px rgb(0 0 0 / 0.1);
+}
+
+.logo-container {
+  margin-bottom: 30px;
+}
+
+.menu {
+  flex-grow: 1;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.menu ul li:hover,
+.menu ul li.active-menu-item {
+  background-color: #f9c9c2;
+  color: #b53828;
+}
+
+.settings.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background-color: #b53828;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.settings.logout:hover {
+  background-color: #9a2d22;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+.gestor-tarefas-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  color: #f38375;
+  font-weight: 700;
+}
+
+.gestor-tarefas-header p {
+  color: #6a6a6a;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Card de filtro e criação */
+.filtro-criacao-tarefa {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgb(243 131 117 / 0.25);
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.filtro-colaborador {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 240px;
+  flex-grow: 1;
+}
+
+.filtro-colaborador label {
+  font-weight: 600;
+  color: #f38375;
+  font-size: 1.1rem;
+}
+
+.filtro-colaborador select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.8px solid #f38375;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.filtro-colaborador select:hover,
+.filtro-colaborador select:focus {
+  border-color: #b53828;
+  outline: none;
+}
+
+/* Área criação nova tarefa */
+.nova-tarefa {
+  background: #fff0ef;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgb(243 131 117 / 0.15);
+  flex-grow: 2;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nova-tarefa h2 {
+  color: #b53828;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.input-text,
+.input-select {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.8px solid #f38375;
+  transition: border-color 0.3s ease;
+}
+
+.input-text::placeholder {
+  color: #f7a199;
+}
+
+.input-text:hover,
+.input-text:focus,
+.input-select:hover,
+.input-select:focus {
+  border-color: #b53828;
+  outline: none;
+}
+
+.btn-primary {
+  margin-top: 12px;
+  align-self: flex-start;
+  background-color: #f38375;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgb(243 131 117 / 0.6);
+}
+
+.btn-primary:hover {
+  background-color: #b53828;
+}
+
+/* Listagem de tarefas */
+.lista-tarefas,
+.tarefas-gestor {
+  margin-bottom: 40px;
+}
+
+.lista-tarefas h2,
+.tarefas-gestor h2 {
+  color: #f38375;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #f38375;
+  padding-bottom: 6px;
+  font-size: 1.5rem;
+}
+
+.tarefas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tarefa-card {
+  background: white;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.tarefa-card:hover {
+  box-shadow: 0 6px 25px rgb(0 0 0 / 0.15);
+}
+
+.tarefa-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 90%;
+}
+
+.tarefa-titulo {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.tarefa-status {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status-pendente {
+  background-color: #f38375;
+}
+
+.status-em-andamento {
+  background-color: #f7a199;
+  color: #722e25;
+}
+
+.status-concluída {
+  background-color: #70c776;
+}
+
+/* Botão excluir */
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: #d3544e;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-delete:hover {
+  color: #a52c2c;
+}
+
+/* Mensagem de sem tarefas */
+.no-tasks-msg {
+  font-style: italic;
+  color: #777;
+}
+
+/* Responsividade simples */
+@media (max-width: 900px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 10px 15px;
+    overflow-x: auto;
+  }
+  .menu ul {
+    display: flex;
+    gap: 15px;
+  }
+  .menu ul li {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  .main-content {
+    padding: 20px 15px;
+  }
+  .filtro-criacao-tarefa {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nova-tarefa {
+    width: 100%;
+  }
+}

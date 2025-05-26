@@ -10,12 +10,17 @@ const Register = () => {
     email: '',
     senha: '',
   });
-
+  const [userType, setUserType] = useState('funcionario'); // 'gestor' ou 'funcionario'
+  
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const handleUserTypeChange = (e) => {
+    setUserType(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -25,8 +30,8 @@ const Register = () => {
         nome: formData.nome,
         email: formData.email,
         senha: formData.senha,
+        tipo_usuario: userType,  // envia o tipo selecionado para o backend
       });
-      
 
       console.log('Usuário registrado com sucesso:', response.data);
       alert("Cadastro realizado! Agora você pode fazer login.");
@@ -49,6 +54,28 @@ const Register = () => {
         </div>
         <div className="right-panel">
           <h2>Criar Conta</h2>
+
+          {/* Custom Radio Buttons */}
+          <div className="user-type-container">
+            <label className="custom-radio">
+              <input
+                type="radio"
+                value="gestor"
+                checked={userType === 'gestor'}
+                onChange={handleUserTypeChange}
+              />
+              <span>Gestor</span>
+            </label>
+            <label className="custom-radio">
+              <input
+                type="radio"
+                value="funcionario"
+                checked={userType === 'funcionario'}
+                onChange={handleUserTypeChange}
+              />
+              <span>Funcionário</span>
+            </label>
+          </div>
 
           <form onSubmit={handleSubmit}>
             <input

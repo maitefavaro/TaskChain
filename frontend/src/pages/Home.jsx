@@ -14,7 +14,7 @@ const Home = () => {
         </div>
 
         <div className="home-box">
-          <h1 className="home-title">Bem-vinda ao TaskChain</h1>
+          <h1 className="home-title">Bem-vindo(a) ao TaskChain</h1>
           <p className="home-subtitle">Organize suas tarefas com estilo</p>
 
           <div className="home-buttons">

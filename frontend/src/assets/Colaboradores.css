@@ -1,0 +1,115 @@
+/* Reset básico, pode importar o css geral se quiser */
+/* Reaproveitando estilo do dashboard */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.sidebar {
+  background-color: #f38375;
+  color: white;
+  width: 240px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu li.active,
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.settings.logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: white;
+  padding: 12px 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: auto;
+}
+
+.settings.logout:hover {
+  background-color: white;
+  color: #f38375;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.dashboard-header h1 {
+  color: #f38375;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+/* Estilo da tabela */
+.collaborators-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.collaborators-list th,
+.collaborators-list td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+}
+
+.collaborators-list th {
+  background-color: #fce4ec;
+  color: #f38375;
+  font-weight: 700;
+  border-bottom: 2px solid #f38375;
+}
+
+.collaborators-list tbody tr:hover {
+  background-color: #fff0f0;
+}
+
+.collaborators-list td.ativo,
+.collaborators-list td.Ativo {
+  color: #2e7d32; /* Verde para ativo */
+  font-weight: 600;
+}
+
+.collaborators-list td.inativo,
+.collaborators-list td.Inativo {
+  color: #d32f2f; /* Vermelho para inativo */
+  font-weight: 600;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}

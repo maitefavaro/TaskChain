@@ -6,12 +6,11 @@ class Pessoa(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     nome = models.CharField(max_length=100)
     email = models.EmailField()
-
+    is_gerente = models.BooleanField(default=False)  # 👈 campo adicionado
 
     def __str__(self):
         return self.nome
 
-    
 
 class Projeto(models.Model):
     nome = models.CharField(max_length=100)
@@ -19,6 +18,7 @@ class Projeto(models.Model):
 
     def __str__(self):
         return self.nome
+
 
 class Tarefa(models.Model):
     titulo = models.CharField(max_length=100)
@@ -33,7 +33,6 @@ class Tarefa(models.Model):
         ('concluida', 'Concluída'),
         ('ajuda', 'Preciso de ajuda'),
     ]
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
 
     data_criacao = models.DateTimeField(auto_now_add=True)

@@ -3,10 +3,16 @@
 import os
 import sys
 
-
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
+    # Adiciona o diretório raiz do projeto ao sys.path para achar a pasta 'api' e 'backend'
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.dirname(current_dir)  # sobe um nível
+    sys.path.append(project_root)
+
+    # Ajuste para o settings, supondo que está em backend/settings.py
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -20,3 +26,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
